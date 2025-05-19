@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swiper Demo with Search Overlay</title>
+    <link rel="stylesheet" href="/css/swiper.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar with logo, name, and search icon -->
+    <div class="navbar">
+      <div class="navbar-logo">
+        <div class="icon-wrapper no-border">
+          <img src="/img/logo.svg" class="icons logo-icon" alt="Logo" />
+        </div>
+        <span class="navbar-title">PLAYFIC</span>
+      </div>
+      <div class="icon-wrapper search-icon blob-button">
+        <img src="/img/search.svg" class="icons" alt="" />
+        <span class="blob"></span>
+      </div>
+    </div>
+
+    <!-- Swiper Container -->
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Home Slide -->
+        <div class="swiper-slide">
+          <div id="home-slide-content" class="slide-content"></div>
+        </div>
+
+        <!-- Explore Slide -->
+        <div class="swiper-slide">
+          <div id="explore-slide-content" class="slide-content"></div>
+        </div>
+
+        <!-- Settings Slide -->
+        <div class="swiper-slide">
+          <div id="settings-slide-content" class="slide-content"></div>
+        </div>
+      </div>
+
+      <!-- Pagination and Navigation Controls -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Search Overlay (initially hidden) -->
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-wrapper">
+        <input
+          type="text"
+          placeholder="Search here..."
+          class="search-input farsi lft"
+        />
+        <button class="search-btn">Search</button>
+      </div>
+      <p class="none">Type something to search...</p>
+      <div class="search-content">
+        <img src="../img/arcane.jpg" alt="" class="search-poster" />
+        <div class="search-info">
+          <p class="search-release english">
+            <span class="release-label">Release date: </span>2024
+          </p>
+          <h3 class="search-title">Arcane</h3>
+          <p class="search-title-persian">آرکین</p>
+          <div class="imdb-btn">IMDB : 9.4</div>
+        </div>
+      </div>
+      <div class="search-content">
+        <img src="../img/arcane2.jpg" alt="" class="search-poster" />
+        <div class="search-info">
+          <p class="search-release english">
+            <span class="release-label">Release date: </span>2024
+          </p>
+          <h3 class="search-title">Arcane</h3>
+          <p class="search-title-persian">آرکین</p>
+          <div class="imdb-btn">IMDB : 9.4</div>
+        </div>
+      </div>
+      <div class="search-content">
+        <img src="../img/arcane3.jpg" alt="" class="search-poster" />
+        <div class="search-info">
+          <p class="search-release english">
+            <span class="release-label">Release date: </span>2024
+          </p>
+          <h3 class="search-title">Arcane</h3>
+          <p class="search-title-persian">آرکین</p>
+          <div class="imdb-btn">IMDB : 9.4</div>
+        </div>
+      </div>
+      <div class="search-content">
+        <img src="../img/arcane4.jpg" alt="" class="search-poster" />
+        <div class="search-info">
+          <p class="search-release english">
+            <span class="release-label">Release date: </span>2024
+          </p>
+          <h3 class="search-title">Arcane</h3>
+          <p class="search-title-persian">آرکین</p>
+          <div class="imdb-btn">IMDB : 9.4</div>
+        </div>
+      </div>
+      <div class="search-content">
+        <img src="../img/arcane5.jpg" alt="" class="search-poster" />
+        <div class="search-info">
+          <p class="search-release english">
+            <span class="release-label">Release date: </span>2024
+          </p>
+          <h3 class="search-title">Arcane</h3>
+          <p class="search-title-persian">آرکین</p>
+          <div class="imdb-btn">IMDB : 9.4</div>
+        </div>
+      </div>
+      <div class="search-content">
+        <img src="../img/arcane.jpg" alt="" class="search-poster" />
+        <div class="search-info">
+          <p class="search-release english">
+            <span class="release-label">Release date: </span>2024
+          </p>
+          <h3 class="search-title">Arcane</h3>
+          <p class="search-title-persian">آرکین</p>
+          <div class="imdb-btn">IMDB : 9.4</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden content for Swiper slides -->
+    <div id="home-content" class="none">
+      <div class="swiper-container mySwiper2 home-swiper">
+        <div class="swiper-wrapper home-swiper-wrapper">
+          <!-- Home Slide -->
+          <div class="swiper-slide home-swiper-slide">
+            <img src="../img/arcane10.jpg" alt="" />
+          </div>
+          <div class="swiper-slide home-swiper-slide">
+            <img src="../img/end1.jpg" alt="" />
+          </div>
+
+          <div class="swiper-slide home-swiper-slide">
+            <img src="../img/breaking.jpg" alt="" />
+          </div>
+
+          <div class="swiper-slide home-swiper-slide">
+            <img src="../img/arcane12.jpg" alt="" />
+          </div>
+
+          <div class="swiper-slide home-swiper-slide">
+            <img src="../img/squid1.jpg" alt="" />
+          </div>
+          <div class="swiper-slide home-swiper-slide">
+            <img src="../img/arcane11.jpg" alt="" />
+          </div>
+
+          <div class="swiper-slide home-swiper-slide">
+            <img src="../img/vikings.jpg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-pagination-2"></div>
+        <!-- Pagination and Navigation Controls -->
+      </div>
+      <div class="swiper mySwiper3">
+        <div class="header-slider">
+          <div class="header-slider-title">آپدیت شده ها</div>
+          <a class="header-slider-link" href="#">مشاهده همه</a>
+        </div>
+        <div class="swiper-wrapper swiper-wrapper3">
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/end.jpg" alt="" class="content-poster" />
+              <div class="content-title">End game</div>
+              <div class="content-info">
+                <span>بازی آخر</span> | <span class="english">2019</span>
+              </div>
+            </div>
+          </a>
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/arcane.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2024</span>
+              </div>
+            </div>
+          </a>
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/arcane2.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2021</span>
+              </div>
+            </div>
+          </a>
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/arcane3.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2024</span>
+              </div>
+            </div>
+          </a>
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/arcane4.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2021</span>
+              </div>
+            </div>
+          </a>
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/arcane5.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2024</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="swiper mySwiper3">
+        <div class="header-slider">
+          <div class="header-slider-title">سریال های جدید</div>
+          <a class="header-slider-link" href="#">مشاهده همه</a>
+        </div>
+        <div class="swiper-wrapper swiper-wrapper3">
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/arcane4.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2021</span>
+              </div>
+            </div>
+          </a>
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/squid.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2024</span>
+              </div>
+            </div>
+          </a>
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/vikings1.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2021</span>
+              </div>
+            </div>
+          </a>
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/arcane3.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2024</span>
+              </div>
+            </div>
+          </a>
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/arcane4.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2021</span>
+              </div>
+            </div>
+          </a>
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/arcane5.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2024</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="swiper mySwiper3 margin-bottom">
+        <div class="header-slider">
+          <div class="header-slider-title">آپدیت شده ها</div>
+          <a class="header-slider-link" href="#">مشاهده همه</a>
+        </div>
+        <div class="swiper-wrapper swiper-wrapper3">
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/breaking1.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2021</span>
+              </div>
+            </div>
+          </a>
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/arcane.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2024</span>
+              </div>
+            </div>
+          </a>
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/arcane2.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2021</span>
+              </div>
+            </div>
+          </a>
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/arcane3.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2024</span>
+              </div>
+            </div>
+          </a>
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/arcane4.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2021</span>
+              </div>
+            </div>
+          </a>
+          <a href="/html/view-movie.html" class="swiper-slide3 swiper-slide content-slide">
+            <div class="content">
+              <img src="../img/arcane5.jpg" alt="" class="content-poster" />
+              <div class="content-title">Arcane</div>
+              <div class="content-info">
+                <span>آرکین</span> | <span class="english">2024</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <br />
+      <br />
+      <br />
+    </div>
+    <div id="explore-content" class="none">
+      <div class="container-category">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" id="movie" class="toggle-btn active">
+            Movie
+          </button>
+          <button type="button" id="series" class="toggle-btn active">
+            Series
+          </button>
+        </div>
+        <a href="#" class="btn-category blob-button">
+          <span class="blob"></span>اکشن</a>
+        <a href="#" class="btn-category blob-button">
+          <span class="blob"></span>انیمه</a>
+        <a href="#" class="btn-category blob-button">
+          <span class="blob"></span>انیمیشن</a>
+        <a href="#" class="btn-category blob-button">
+          <span class="blob"></span>ایرانی</a>
+        <a href="#" class="btn-category blob-button">
+          <span class="blob"></span>ماجراجویی</a>
+        <a href="#" class="btn-category blob-button">
+          <span class="blob"></span>کمدی</a>
+        <a href="#" class="btn-category blob-button">
+          <span class="blob"></span>درام</a>
+        <a href="#" class="btn-category blob-button">
+          <span class="blob"></span>وحشت</a>
+        <a href="#" class="btn-category blob-button">
+          <span class="blob"></span>عاشقانه</a>
+        <a href="#" class="btn-category blob-button">
+          <span class="blob"></span>علمی‌تخیلی</a>
+        <a href="#" class="btn-category blob-button">
+          <span class="blob"></span>فانتزی</a>
+        <a href="#" class="btn-category blob-button">
+          <span class="blob"></span>هیجان‌انگیز</a>
+        <a href="#" class="btn-category blob-button">
+          <span class="blob"></span>مستند</a>
+        <a href="#" class="btn-category blob-button">
+          <span class="blob"></span>کره‌ای و آسیایی</a>
+        <a href="#" class="btn-category blob-button">
+          <span class="blob"></span>هندی</a>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+    </div>
+    <div id="settings-content" class="none">
+      <div class="container-profile">
+        <img src="../img/avatar.jpg" alt="" class="profile-img" />
+        <button class="ac-name">
+          <img src="../img/edit.svg" alt="" class="edit-icon icons" />
+          <p>id_850385</p>
+        </button>
+      </div>
+      <div class="account-list">
+        <!-- Sign Up / Login Section -->
+        <button class="list-wrapper">
+          <img src="../img/log-in.svg" alt="" class="list-icon icons" />
+          <div class="list-title">ثبت نام | وارد شدن</div>
+        </button>
+
+        <!-- Subscription Details Section -->
+        <button class="list-wrapper">
+          <img src="../img/permium.svg" alt="" class="list-icon icons" />
+          <div class="list-title">خرید اشتراک</div>
+        </button>
+
+        <!-- playlist Section -->
+        <button class="list-wrapper">
+          <img src="../img/playlist.svg" alt="" class="list-icon icons" />
+          <div class="list-title">پلی لیست</div>
+        </button>
+
+        <!-- Downloads Section -->
+        <button class="list-wrapper">
+          <img src="../img/download.svg" alt="" class="list-icon icons" />
+          <div class="list-title">دانلودها</div>
+        </button>
+
+        <!-- share Section -->
+        <button class="list-wrapper">
+          <img src="../img/share.svg" alt="" class="list-icon icons" />
+          <div class="list-title">اشتراک گذاری</div>
+        </button>
+
+        <!-- Settings Section -->
+        <button class="list-wrapper">
+          <img src="../img/settings.svg" alt="" class="list-icon icons" />
+          <div class="list-title">تنظیمات</div>
+        </button>
+        <!-- About Us Section -->
+        <button class="list-wrapper">
+          <img src="../img/info.svg" alt="" class="list-icon icons" />
+          <div class="list-title">درباره ما</div>
+        </button>
+
+        <!-- Log Out Section -->
+        <button
+          class="list-wrapper"
+          onclick="document.getElementById('modal').showModal()"
+        >
+          <img src="../img/log-out.svg" alt="" class="list-icon icons" />
+          <div class="list-title">خروج از حساب</div>
+        </button>
+
+        <dialog id="modal">
+          <p style="margin-bottom: 15px">
+            آیا میخواهید از حسابتان خارج شوید؟
+          </p>
+          <div class="btn-flx">
+            <button
+            class="btn-exit flex"
+            onclick="document.getElementById('modal').close()"
+            >
+            <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            >
+            <path
+            d="M8 12.75H15V17V18C15 20 14 21 12 21H6C4 21 3 20 3 18V6C3 4 4 3 6 3H12C14 3 15 4 15 6V7V11.25H8C7.586 11.25 7.25 11.586 7.25 12C7.25 12.414 7.586 12.75 8 12.75ZM21.692 11.713C21.654 11.621 21.599 11.538 21.53 11.469L18.53 8.46899C18.237 8.17599 17.762 8.17599 17.469 8.46899C17.176 8.76199 17.176 9.237 17.469 9.53L19.189 11.25H15V12.75H19.189L17.469 14.47C17.176 14.763 17.176 15.238 17.469 15.531C17.615 15.677 17.807 15.751 17.999 15.751C18.191 15.751 18.383 15.678 18.529 15.531L21.529 12.531C21.598 12.462 21.653 12.379 21.691 12.287C21.768 12.103 21.768 11.897 21.692 11.713Z"
+            fill="#ff1e1e"
+            />
+          </svg>
+          <p>خروج</p>
+        </button>
+        <button
+          class="btn-exit"
+          onclick="document.getElementById('modal').close()"
+          style="border: 1px solid #697380"
+        >
+          لغو
+        </button>
+          </div>
+        </dialog>
+      </div>
+    </div>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/index.js"></script>
+  </body>
+</html>
